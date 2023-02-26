@@ -1,0 +1,16 @@
+function isPalindrome(word)
+    if length(word) <= 1 then
+        return true
+    else if firstCharacter(word) = lastCharacter(word) then
+        return isPalindrome(middleCharacters(word))
+    else
+        return false
+
+function firstCharacter(word)
+    return substring(word, 1, 1)
+
+function lastCharacter(word)
+    return substring(word, length(word), 1)
+
+function middleCharacters(word)
+    return substring(word, 2, length(word) - 2 + 1)
